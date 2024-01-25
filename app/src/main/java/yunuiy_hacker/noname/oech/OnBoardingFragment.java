@@ -87,7 +87,7 @@ public class OnBoardingFragment extends Fragment {
                 btn_sign_up.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(getContext(), Holder.class);
+                        Intent i = new Intent(getContext(), SignUp.class);
                         startActivity(i);
                     }
                 });
@@ -95,7 +95,7 @@ public class OnBoardingFragment extends Fragment {
                 btn_sign_in.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(getContext(), Holder.class);
+                        Intent i = new Intent(getContext(), LogIn.class);
                         startActivity(i);
                     }
                 });
@@ -104,7 +104,7 @@ public class OnBoardingFragment extends Fragment {
         btn_pre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getContext(), Holder.class);
+                Intent i = new Intent(getContext(), SignUp.class);
                 startActivity(i);
             }
         });

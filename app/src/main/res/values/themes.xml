@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.OECH" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">#006CEC</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -13,4 +13,51 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="create_an_a">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="complete_th">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
+    <style name="lablename">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
+    <style name="hint">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">#CFCFCF</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="welcome_bac">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="fill_in_you">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
+    <style name="forgot_pass">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="enter_your_">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
+    <style name="if_you_didn">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
 </resources>
