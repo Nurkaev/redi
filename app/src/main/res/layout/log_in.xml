@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcome_bac"
+                    style="@style/welcome_bac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:text="@string/welcome_bac"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/fill_in_you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fill_in_you"
+                    android:textAppearance="@style/fill_in_you"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Email Address"
+                    android:textAppearance="@style/lablename" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/log_in_til1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_tiet1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="***********@mail.com"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textAppearance="@style/hint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Password"
+                    android:textAppearance="@style/lablename" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/log_in_til2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:endIconDrawable="@drawable/pass_toggle"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="#292D32"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_tiet2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="**********"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textAppearance="@style/hint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/log_in_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="?colorPrimary"
+                        android:text="Remember password"
+                        android:textColor="#A7A7A7"
+                        android:textSize="12sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/log_in_forgot_pass_mb"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rippleColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:text="Forgot password?"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/log_in_mb"
+                    style="@style/ThemeOverlay.Material3.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="187dp"
+                    android:enabled="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Log in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:cornerRadius="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:autoLink="none"
+                        android:gravity="center"
+                        android:text="Already have an account? "
+                        android:textAppearance="@style/lablename" />
+
+                    <TextView
+                        android:id="@+id/log_in_already_sign_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:autoLink="none"
+                        android:gravity="center"
+                        android:text="Sign Up"
+                        android:textColor="?colorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:autoLink="none"
+                    android:gravity="center"
+                    android:text="or log in using"
+                    android:textAppearance="@style/lablename" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="28dp"
+                    android:src="@drawable/icon_google" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
