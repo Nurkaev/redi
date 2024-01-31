@@ -60,4 +60,31 @@
         <item name="android:textColor">#A7A7A7</item>
     </style>
 
+    <style name="app_bar_tv">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+        <item name="android:titleTextColor">#A7A7A7</item>
+    </style>
+
+    <style name="profile_black_tv">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="profile_gray_tv">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#A7A7A7</item>
+    </style>
+
+    <style name="send_a_package_tv">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="send_a_package_ed">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorHint">#CFCFCF</item>
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
 </resources>
