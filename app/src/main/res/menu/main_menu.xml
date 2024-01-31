@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/main_menu_item1"
+            android:icon="@drawable/home_selector"
+            android:title="Home" />
+        <item
+            android:id="@+id/main_menu_item2"
+            android:icon="@drawable/wallet_selector"
+            android:title="Wallet" />
+        <item
+            android:id="@+id/main_menu_item3"
+            android:icon="@drawable/track_selector"
+            android:title="Track" />
+        <item
+            android:id="@+id/main_menu_item4"
+            android:icon="@drawable/profile_selector"
+            android:title="Profile" />
+    </group>
+</menu>

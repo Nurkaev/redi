@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/transaction_successful_1_pd"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="99dp"
+        android:indeterminateDrawable="@drawable/animated_rotate"
+        android:progress="100" />
+
+    <ImageView
+        android:id="@+id/transaction_successful_1_iv"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/succecful"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="98dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/transaction_successful_1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="Transaction Successful"
+            android:textColor="#3A3A3A"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Your rider is on the way to your destination"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tracking Number "
+                android:textColor="#3A3A3A"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/transaction_successful_1_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="R-7458-4567-4434-5854"
+                android:textColor="#0560FA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/transaction_successful_1_mb1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="141dp"
+            android:layout_marginRight="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Track my item"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/transaction_successful_1_mb2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Go back to homepage"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
