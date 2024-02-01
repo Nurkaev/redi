@@ -8,17 +8,29 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.Random;
 import java.util.regex.Pattern;
 
 public class SendAPackageReceipt extends AppCompatActivity {
+    int code = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.send_a_package_receipt);
+        code = getIntent().getIntExtra("code", 0);
+
+        MaterialToolbar mt = (MaterialToolbar) findViewById(R.id.send_a_package_receipt_mt);
+        mt.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         String address1 = getIntent().getStringExtra("address1");
         String country1 = getIntent().getStringExtra("country1");
         String phone1 = getIntent().getStringExtra("phone1");
@@ -50,41 +62,61 @@ public class SendAPackageReceipt extends AppCompatActivity {
         TextView tv12 = (TextView) findViewById(R.id.send_a_package_receipt_tv12);
         TextView tv13 = (TextView) findViewById(R.id.send_a_package_receipt_tv13);
         TextView tv14 = (TextView) findViewById(R.id.send_a_package_receipt_tv14);
+        TextView tv15 = (TextView) findViewById(R.id.send_a_package_receipt_tv15);
 
-        tv1.setText(address1 + ", " + country1);
-        tv2.setText(phone1);
-        tv3.setText("1. " + address2 + ", " + country2);
-        tv4.setText(phone2);
-        if (!address3.isEmpty()) {
-            LinearLayout ll = (LinearLayout) findViewById(R.id.send_a_package_receipt_ll);
-            ll.setVisibility(View.VISIBLE);
-            tv5.setText("2. " + address3 + ", " + country3);
-            tv6.setText(phone3);
+        if (code == 0) {
+            tv1.setText(address1 + ", " + country1);
+            tv2.setText(phone1);
+            tv3.setText("1. " + address2 + ", " + country2);
+            tv4.setText(phone2);
+            if (address3 != null) {
+                if (!address3.isEmpty()) {
+                    LinearLayout ll = (LinearLayout) findViewById(R.id.send_a_package_receipt_ll);
+                    ll.setVisibility(View.VISIBLE);
+                    tv5.setText("2. " + address3 + ", " + country3);
+                    tv6.setText(phone3);
+                }
+            }
+            tv7.setText(others2 + ", " + others3);
+            tv8.setText(weight);
+            tv9.setText(worth);
         }
-        tv7.setText(others2 + ", " + others3);
-        tv8.setText(weight);
-        tv9.setText(worth);
+
         String number = generateNumber();
         tv10.setText(number);
 
-
         MaterialButton mb1 = (MaterialButton) findViewById(R.id.send_a_package_receipt_mb1);
+
+        MaterialButton mb2 = (MaterialButton) findViewById(R.id.send_a_package_receipt_mb2);
+        if (code == 1) {
+            tv15.setVisibility(View.VISIBLE);
+            mb1.setText("Report");
+            mb2.setText("Successful");
+        }
         mb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                if (code == 0) {
+                    finish();
+                } else if (code == 1) {
+
+                }
             }
         });
-        MaterialButton mb2 = (MaterialButton) findViewById(R.id.send_a_package_receipt_mb2);
         mb2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), TransactionSuccessful.class);
-                i.putExtra("number", number);
+                Intent i = null;
+                if (code == 0) {
+                    i = new Intent(getApplicationContext(), TransactionSuccessful.class);
+                    i.putExtra("number", number);
+                }
+                else if (code == 1) {
+                    i = new Intent(getApplicationContext(), DeliverySuccessful.class);
+                }
                 startActivity(i);
             }
         });
-
     }
 
     public String generateNumber() {

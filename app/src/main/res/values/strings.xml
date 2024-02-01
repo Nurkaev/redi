@@ -36,4 +36,7 @@ New Password
     <string name="enter_new_p">
 Enter new password
 </string>
+    <string name="delivery_fe">
+Delivery fee
+</string>
 </resources>

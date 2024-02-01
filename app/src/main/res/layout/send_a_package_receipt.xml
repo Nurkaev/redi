@@ -21,7 +21,7 @@
                 android:backgroundTint="@android:color/white">
 
                 <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/send_a_package_mt"
+                    android:id="@+id/send_a_package_receipt_mt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:navigationIcon="@drawable/icon_left_arrow"
@@ -113,9 +113,9 @@
                     android:id="@+id/send_a_package_receipt_ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginTop="8dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/send_a_package_receipt_tv5"
@@ -362,6 +362,19 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/send_a_package_receipt_tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="-16dp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone"
+                android:text="Click on  delivered for successful delivery and rate rider or report missing item"
+                android:textColor="#2F80ED"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

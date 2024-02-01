@@ -3,6 +3,7 @@ package yunuiy_hacker.noname.oech;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ public class Track extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(512, 512);
         setContentView(R.layout.track);
         BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.track_bnv);
         bnv.setSelectedItemId(R.id.main_menu_item3);
@@ -40,5 +42,11 @@ public class Track extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void sendAPAckage(View view) {
+        Intent i = new Intent(getApplicationContext(), SendAPackageReceipt.class);
+        i.putExtra("code", 1);
+        startActivity(i);
     }
 }

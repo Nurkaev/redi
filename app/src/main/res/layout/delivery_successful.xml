@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/delivery_successful_pd"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="99dp"
+        android:indeterminateDrawable="@drawable/animated_rotate"
+        android:progress="100" />
+
+    <ImageView
+        android:id="@+id/delivery_successful_iv"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/succecful"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/delivery_successful_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Successful"
+            android:textColor="#3A3A3A"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/delivery_successful_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Your Item has been delivered successfully"
+            android:textColor="#3A3A3A"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:text="Rate Rider"
+            android:textColor="#0560FA"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="?colorPrimary"
+            android:stepSize="1"
+            android:layout_marginTop="16dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            app:startIconTint="?colorPrimary"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="24dp"
+            android:background="@null"
+            app:counterMaxLength="10"
+            app:counterEnabled="true"
+            android:elevation="5dp"
+            app:startIconDrawable="@drawable/add_feedback_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:hint="Add feedback"
+                android:backgroundTint="@color/white">
+
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delivery_successful_mb"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginRight="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Done"
+            android:onClick="done"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
