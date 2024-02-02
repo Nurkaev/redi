@@ -62,8 +62,7 @@
 
     <style name="app_bar_tv">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#A7A7A7</item>
-        <item name="android:titleTextColor">#A7A7A7</item>
+        <item name="titleTextColor">#A7A7A7</item>
     </style>
 
     <style name="profile_black_tv">

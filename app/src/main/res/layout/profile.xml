@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                app:titleTextColor="#A7A7A7"
                 app:title="Profile"
                 app:titleTextAppearance="@style/app_bar_tv">
 
@@ -71,6 +72,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/profile_balance_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -87,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/pass_invisible"
+                android:onClick="setBalanceVisibility"
                 app:iconTint="#3A3A3A" />
 
         </LinearLayout>

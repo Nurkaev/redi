@@ -17,6 +17,7 @@
             app:navigationIcon="@drawable/icon_left_arrow"
             app:navigationIconTint="?colorPrimary"
             app:title="Add Payment method"
+            app:titleTextColor="#A7A7A7"
             app:titleCentered="true"
             app:titleTextAppearance="@style/app_bar_tv">
 

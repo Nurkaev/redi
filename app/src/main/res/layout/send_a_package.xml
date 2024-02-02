@@ -6,6 +6,26 @@
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/send_a_package_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="#A7A7A7"
+            app:navigationIcon="@drawable/icon_left_arrow"
+            app:navigationIconTint="?colorPrimary"
+            app:title="Send a package"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/app_bar_tv">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
@@ -16,24 +36,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/white">
 
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/send_a_package_mt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:navigationIcon="@drawable/icon_left_arrow"
-                    app:navigationIconTint="?colorPrimary"
-                    app:title="Send a package"
-                    app:titleCentered="true"
-                    app:titleTextAppearance="@style/app_bar_tv">
-
-                </com.google.android.material.appbar.MaterialToolbar>
-
-            </com.google.android.material.appbar.AppBarLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

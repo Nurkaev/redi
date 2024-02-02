@@ -23,6 +23,7 @@
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/send_a_package_receipt_mt"
                     android:layout_width="match_parent"
+                    app:titleTextColor="#A7A7A7"
                     android:layout_height="wrap_content"
                     app:navigationIcon="@drawable/icon_left_arrow"
                     app:navigationIconTint="?colorPrimary"

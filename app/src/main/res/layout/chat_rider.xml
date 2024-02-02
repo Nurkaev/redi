@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chat_rider_abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/chat_rider_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/icon_left_arrow"
+            app:navigationIconTint="?colorPrimary">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/chat_rider_siv"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:src="@drawable/chinoso"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+                <TextView
+                    android:id="@+id/chat_rider_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.62dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Chinoso James"
+                    android:textColor="#3A3A3A"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="29dp"
+                android:background="@null"
+                android:onClick="call"
+                android:src="@drawable/icon_phone" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/chat_rider_ll2"
+        android:layout_below="@id/chat_rider_abl">
+
+        <LinearLayout
+            android:id="@+id/chat_rider_ll_messages"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="30dp"
+                android:maxWidth="220dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/message_bacckground"
+                android:backgroundTint="#0560FA"
+                android:text="Hello, Please check your phone, I just booked you to deliver my stuff"
+                android:padding="10dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
+                android:maxWidth="220dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/message_bacckground"
+                android:backgroundTint="#CFCFCF"
+                android:text="Thank you for contacting me."
+                android:padding="10dp"
+                android:textColor="#3A3A3A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
+                android:maxWidth="220dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/message_bacckground"
+                android:backgroundTint="#CFCFCF"
+                android:text="I am already on my way to the pick up venue."
+                android:padding="10dp"
+                android:textColor="#3A3A3A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
+                android:maxWidth="220dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/message_bacckground"
+                android:backgroundTint="#0560FA"
+                android:text="Alright, I wll be waiting"
+                android:padding="10dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_rider_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="6.44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            app:icon="@drawable/icon_smail"
+            app:iconTint="#A7A7A7" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_8dp"
+            android:backgroundTint="#CFCFCF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/chat_rider_ed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Enter a message"
+                android:paddingLeft="32dp"
+                android:paddingRight="16dp"
+                android:textColorHint="#A7A7A7" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="1.2"
+                app:icon="@drawable/icon_dictation"
+                app:iconTint="#A7A7A7" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:backgroundTint="@android:color/transparent"
+            android:onClick="sendMessage"
+            android:padding="0dp"
+            android:src="@drawable/icon_triangle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
